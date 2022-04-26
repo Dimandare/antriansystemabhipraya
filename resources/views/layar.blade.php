@@ -4,8 +4,9 @@
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 <head>
     <meta charset="utf-8">
-    <title>Dashboard : msAntrian v.1.0.0</title>
+	<title>Antrian Dashboard | Polres Pati -</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="/img/polreslogo.png" />
 	<link rel="stylesheet" type="text/css" href="/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="/css/custom.min.css">
 	<link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
@@ -13,7 +14,7 @@
 	<link rel="stylesheet" type="text/css" href="/css/prism-okaidia.css">
     <style>	
     </style>
-
+	
 	<script type="text/javascript">
 	window.onload = function() { 
 		jam(); 
@@ -50,12 +51,12 @@
 		</script>
   </head>
   
-  <body style="background-color:#067b8c; background-image:url({{ $image1 }});">
+  <body style="background-color:#067b8c; background-image:url();">
   
     <div class="navbar navbar-expand-lg fixed-top navbar-dark bg-info text-white">
       <div class="container-fluid">
         <a href="index.html" class="navbar-brand" id="logo">
-			<img src="{{ $image2 }}" height="60">
+			<img src="/img/logo.png" height="60">
 		</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -83,7 +84,7 @@
 			</div>
 			<div class="col-lg-6 col-md-6 col-xs-6">
 				<video width='100%' height='370' loop autoplay muted>
-					<source src='{{ $video1 }}' type='video/mp4'>
+					<source src='/video/profil_polres_pati.mp4' type='video/mp4'>
 				</video> 				
 				<div id="call_player"></div>
 			</div>

@@ -4,19 +4,21 @@
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 <head>
     <meta charset="utf-8">
-    <title>Login : msAntrian v.1.0.0</title>
+	<title>Antrian | Polres Pati -</title>
+	<meta name="csrf-token" content="{{ csrf_token() }}">
+	<link rel="shortcut icon" type="image/x-icon" href="/img/polreslogo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="../css/login/atasan/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="../css/login/atasan/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="../css/login/atasan/custom.min.css">
   </head>
   
-  <body style="background-color:#FFF; background-image:url({{ $image1 }});">
+  <body style="background-color:#FFF; background-image:url('/img/background.png');">
 
 	<div class="container">
 		<div class="row">
 			<div class="col-md-4 offset-md-4" align="center">
-				<img src="{{ $image2 }}" height="60"><br><br>
+				<img src="/img/logo.png" height="60"><br><br>
 			</div>
 		</div>
 		<div class="row">
@@ -24,7 +26,8 @@
 				<div class="card card-default">
 					<div class="card-header"><strong>Login Petugas</strong></div>
 					<div class="card-body">
-						<form method="post" action="" enctype="multipart/form-data">
+						<form method="post" action="/Admin" enctype="multipart/form-data">
+							@csrf <!-- {{ csrf_field() }} -->
 														<div class="form-group row">
 								<label class="col-md-4 col-form-label" for="username">Username</label>
 								<div class="col-md-8">

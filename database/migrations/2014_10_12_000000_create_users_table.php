@@ -13,28 +13,22 @@ return new class extends Migration
      */
     public function up()
     {
+        
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->string('username');
             $table->string('password');
-            $table->string('role');
+            $table->enum('level', ['Administrator', 'Atasan', 'User']);
+            $table->enum('Aktif', ['aktif', 'tidak aktif']);//
             $table->rememberToken();
-            $table->timestamps();
+            $table->timestamp('created_at')->default(\DB::raw('CURRENT_TIMESTAMP'));
+            $table->timestamp('updated_at')->default(\DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'));
         });
       
-        Schema::create('video', function (Blueprint $table) {
-            $table->id();
-            $table->string('nama_video');
-            $table->string('url');
-            $table->timestamps();
-        });
-        Schema::create('info', function (Blueprint $table) {
-            $table->id();
-            $table->string('judul_info');
-            $table->string('isi_info');
-            $table->timestamps();
-        });
+       
+        
+      
     }
 
     /**

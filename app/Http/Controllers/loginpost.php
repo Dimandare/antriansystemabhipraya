@@ -23,16 +23,23 @@ class loginpost extends Controller
         return view('/login');
     }
 
-    public function inilogin(Request $request){
+    public function adminlogin(Request $request){
         $request->validate([
             'username' => 'required',
             'password' => 'required',
             'kode_akses' => 'required'
         ]);
-        dd('berhasil login');
-        return view('Admin', [
-            "image3" => "/img/logo_light.png"
-     ]);
+        // dd('berhasil login');
+        return view('Admin/Admin');
+    }
+    public function atasanlogin(Request $request){
+        $request->validate([
+            'username' => 'required',
+            'password' => 'required',
+            'kode_akses' => 'required'
+        ]);
+        // dd('berhasil login');
+        return view('Atasan');
     }
 
 
@@ -60,6 +67,6 @@ class loginpost extends Controller
 
     public function logout(){
         Session::flush();
-        return redirect('login')->with('alert','Kamu sudah logout');
+        return redirect('')->with('alert','Kamu sudah logout');
     }
 }

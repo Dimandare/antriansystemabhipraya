@@ -16,45 +16,78 @@ class AkunSeeder extends Seeder
      */
     public function run()
     {
-      
-       User::create([
+
+       //KOSONGKAN TABEL SISWA
+       \DB::table('users')->insert([
+        [
+         'name'     => 'Ini adalah Admin',
+         'username'   => 'admin',
+         'password'   => bcrypt('admin'),
+         'aktif'      => 'aktif',
+         'level'       => 'Administrator',
         
-            'username' => 'admin',
-            'name'    => 'ini adalah admin',
-            'password' => bcrypt('admin'),
-            'role'     => 'admin',
-            'remember_token' => str_random(10)
-        ,
+
+        ],
+        [
+            'name'     => 'Ini adalah Kasat',
+            'username'   => 'kasat',
+            'password'   => bcrypt('kasat'),
+            'aktif'      => 'aktif',
+            'level'       => 'Atasan',
+            
+        ],
+        [
+            'name'     => 'Ini adalah Loket1',
+            'username'   => 'loket1',
+            'password'   => bcrypt('loket1'),
+            'aktif'      => 'aktif',
+            'level'       => 'User',
+            
+
+
+        ],
+        [
+        'name'     => 'Ini adalah Loket2',
+        'username'   => 'loket2',
+        'password'   => bcrypt('loket2'),
+        'aktif'      => 'aktif',
+        'level'       => 'User',
         
-            'username' => 'kasat',
-            'name'    => 'ini adalah kasat',
-            'password' => bcrypt('kasat'),
-            'role'     => 'kasat',
-            'remember_token' => str_random(10)
-        ,
-        
-            'username' => 'loket1',
-            'name'    => 'ini adalah loket1',
-            'password' => bcrypt('kasat'),
-            'role'     => 'loket1',
-            'remember_token' => str_random(10)
-        ,
-        
-            'username' => 'loket2',
-            'name'    => 'ini adalah loket2',
-            'password' => bcrypt('kasat'),
-            'role'     => 'loket2',
-            'remember_token' => str_random(10)
-        ,
+        ],
+        [
+            'name'     => 'Ini adalah Loket3',
+            'username'   => 'loket3',
+            'password'   => bcrypt('loket3'),
+            'aktif'      => 'aktif',
+            'level'       => 'User',
+           
+
+        ],
+        [
+        'name'     => 'Ini adalah Loket4',
+        'username'   => 'loket4',
+        'password'   => bcrypt('loket4'),
+        'aktif'      => 'aktif',
+        'level'       => 'User',
+       
+
+
+        ],
+        [
+            'name'     => 'Ini adalah Loket5',
+        'username'   => 'loket5',
+        'password'   => bcrypt('loket5'),
+        'aktif'      => 'aktif',
+        'level'       => 'User',
+       
+
+        ],
     
-            'username' => 'loket3',
-            'name'    => 'ini adalah loket3',
-            'password' => bcrypt('kasat'),
-            'role'     => 'loket3',
-            'remember_token' => str_random(10)
-      
+
        ]);
-        
+       
+
+    
         // Video::create([
         
         //     'nama_video' => 'polres.mp4',

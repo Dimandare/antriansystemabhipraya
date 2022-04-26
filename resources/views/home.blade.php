@@ -4,9 +4,9 @@
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 <head>
     <meta charset="utf-8">
-    <title>msAntrian v.1.0.0</title>
+    <title>Antrian | Polres Pati -</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+    <link rel="shortcut icon" type="image/x-icon" href="img/polreslogo.png" />
     
     <link rel="stylesheet" type="text/css" href="/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="/css/custom.min.css">
@@ -61,7 +61,7 @@
 	</script>
   </head>
   
-  <body style="background-color:#FFF; background-image:url({{ $image }});">
+  <body style="background-color:#FFF; background-image: linear-gradient(rgba(255, 255, 255, 0.35), rgba(255,255,255,0.35)),url(img/polres.jpg); background-size: cover; opacity: 100%;">
   
     <div class="navbar navbar-expand-lg fixed-top">
       <div class="container-fluid">
@@ -81,10 +81,17 @@
 		<div class="page-header" id="banner">
 			<div class="row">
 			  <div class="col-lg-12 col-md-12" align="center">
-				<h2>msAntrian Versi 1.0.0</h2>
+				
 				<p class="lead"></p>
 			  </div>
 			</div>
+			<br>
+			<br>
+			<br>
+			<br><br>
+			<br>
+			<br>
+			<br>
 			<div class="row">
 				<div class="col-lg-2 col-md-2 offset-md-2" align="center">
 					<a href="anjungan/">
@@ -115,6 +122,11 @@
 					</a>
 				</div>
 			</div>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
 			<div class="row">
 			  <div class="col-lg-12 col-md-12" align="center">
 				<p>&nbsp;</p>

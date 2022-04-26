@@ -16,51 +16,40 @@ use App\Http\Controllers\loginpost;
 */
 
 Route::get('/', function () {
-    return view('home', [
-        "image" => "img/background.png"
- ]);
+    return view('home');
 });
-// Route::get('/Admin', function () {
-//     return view('Admin', [
-//         "image3" => "/img/logo_light.png"
-//  ]);
-// });
+
 
 
 
 Route::get('/atasan', function () {
-    return view('login', [
-        "image1" => "/img/background.png",
-        "image2" => "/img/logo.png",
- ]);
+    return view('login');
 });
 
 
 Route::get('/petugas', function () {
-    return view('loginpetugas', [
-        "image1" => "/img/background.png",
-        "image2" => "/img/logo.png"
- ]);
+    return view('loginpetugas');
 });
-Route::post('Admin',[loginpost::class,'inilogin']);
+Route::post('Admin',[loginpost::class,'adminlogin']);
+Route::get('Admin',[loginpost::class,'loginpetugas']);
 
-Route::get('Admin',[loginpost::class,'index']);
+Route::post('Atasan',[loginpost::class,'atasanlogin']);
+Route::get('Atasan',[loginpost::class,'login']);
+
+Route::get('logout',[loginpost::class,'logout']);
 
 Route::get('/layar', function () {
-    return view('layar', [
-        "image1" => "/img/background.png",
-        "image2" => "/img/logo.png",
-        "video1" => "/video/profil_polres_pati.mp4",
-        "video2" => "/video/pancasila.mp4"
- ]);
+    
+    return view('layar');
 });
 
 Route::get('/anjungan', function () {
-    return view('anjungan', [
-        "image1" => "/img/background.png",
-        "image2" => "/img/logo.png"
- ]);
+    return view('anjungan');
 });
 
 
-
+Route::get('/InfoAdmin', function () {
+    
+    return view('Admin/InfoAdmin');
+});
+Route::get('Info',[DataAdmin::class,'info']);

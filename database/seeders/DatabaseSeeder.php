@@ -1,10 +1,11 @@
 <?php
 
 namespace Database\Seeders;
-
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\DB;
+
 
 class DatabaseSeeder extends Seeder
 {
@@ -15,7 +16,11 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        Eloquent::unguard();
-        $this->call('UsersTableSeeder');
+        // Eloquent::unguard();
+        $this->call([
+            AkunSeeder::class,
+            infoseeder::class,
+            videoseeder::class,
+        ]);
     }
 }

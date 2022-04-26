@@ -4,13 +4,14 @@
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 <head>
     <meta charset="utf-8">
-    <title>msAntrian v.1.0.0</title>
+    <title>Antrian | Polres Pati -</title>
+	<link rel="shortcut icon" type="image/x-icon" href="/img/polreslogo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="/css/custom.min.css">
 	<link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="/css/jquery.gritter.css">
-	<link rel="stylesheet" type="text/css" href="/css/jprism-okaidia.css">
+	<link rel="stylesheet" type="text/css" href="/css/prism-okaidia.css">
     <style>
 		@media screen {
 			#print_area { display: none; }
@@ -69,12 +70,12 @@
 	</script>
   </head>
   
-  <body style="background-color:#FFF; background-image:url({{ $image1 }});">
+  <body style="background-color:#FFF; background-image:url('/img/background.png');">
   
     <div class="navbar navbar-expand-lg fixed-top">
       <div class="container-fluid">
         <a href="index.html" class="navbar-brand" id="logo">
-			<img src="{{ $image2 }}" height="50">
+			<img src="/img/logo.png" height="50">
 		</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -105,44 +106,80 @@
 			</div>
 			<div class="row">
 				<div class="col-lg-2 col-md-2 offset-md-1" align="center">
-					<button id="service_1" class="btn btn-lg btn-success" style="height: 150px; width:200px; margin-top: 20px;">
+					<button id="service_1"  onclick="increase_n(1);printDiv('print_area');"class="btn btn-lg btn-success" style="height: 150px; width:200px; margin-top: 20px;">
 						PENDAFTARAN
 						<hr>
-						<small><span id="jml_antrian_1">0</span> Antrian</small>
+						<small class="content"><span class="1">0</span> Antrian</small>
 					</button>
 				</div>
 				<div class="col-lg-2 col-md-2" align="center">
-					<button id="service_2" class="btn btn-lg btn-secondary" style="height: 150px; width:200px; margin-top: 20px;">
+					<button id="service_2" onclick="increase_n2(1);printDiv('print_area');" class="btn btn-lg btn-secondary" style="height: 150px; width:200px; margin-top: 20px;">
 						SKCK ONLINE
 						<hr>
-						<small><span id="jml_antrian_2">0</span> Antrian</small>
+						<small class="content2"><span class="2">0</span> Antrian</small>
 					</button>
 				</div>
 				<div class="col-lg-2 col-md-2" align="center">
-					<button id="service_4" class="btn btn-lg btn-info" style="height: 150px; width:200px; margin-top: 20px;">
+					<button id="service_4" onclick="increase_n3(1);printDiv('print_area');" class="btn btn-lg btn-info" style="height: 150px; width:200px; margin-top: 20px;">
 						VERIFIKASI
 						<hr>
-						<small><span id="jml_antrian_4">0</span> Antrian</small>
+						<small class="content3"><span class="3">0</span> Antrian</small>
 					</button>
 				</div>
 				<div class="col-lg-2 col-md-2" align="center">
-					<button id="service_3" class="btn btn-lg btn-primary" style="height: 150px; width:200px; margin-top: 20px;">
+					<button id="service_3"  onclick="increase_n4(1);printDiv('print_area');" class="btn btn-lg btn-primary" style="height: 150px; width:200px; margin-top: 20px;">
 						DIFABEL
 						<hr>
-						<small><span id="jml_antrian_3">0</span> Antrian</small>
+						<small class="content4"><span class="4">0</span> Antrian</small>
 					</button>
 				</div>
 				<div class="col-lg-2 col-md-2" align="center">
-					<button id="service_5" class="btn btn-lg btn-dark" style="height: 150px; width:200px; margin-top: 20px;">
+					<button id="service_5"  onclick="increase_n5(1);printDiv('print_area');remove(5);"" class="btn btn-lg btn-dark" style="height: 150px; width:200px; margin-top: 20px;">
 						PENGADUAN
 						<hr>
-						<small><span id="jml_antrian_5">0</span> Antrian</small>
+						<small class="content5"> <span class="5">0</span> Antrian</small>
 					</button>
 				</div>
 			</div>
 		</div>
     </div>
-	
+	<script src="http://code.jquery.com/jquery-1.4.1.min.js" type="text/javascript"></script>
+    
+    <script type="text/javascript">
+        var size_ini = 1;
+        function increase_n5(size) {
+            var size_increase = size_ini++;
+            $(".content5").html("<span>" + size_increase + ' ' + 'Antrian' + "</span>")
+        }
+    </script>
+	 <script type="text/javascript">
+        var size_ini2 = 1;
+        function increase_n4(size) {
+            var size_increase = size_ini2++;
+            $(".content4").html("<span>" + size_increase + ' ' + 'Antrian' + "</span>")
+        }
+    </script>
+	 <script type="text/javascript">
+        var size_ini3 = 1;
+        function increase_n3(size) {
+            var size_increase = size_ini3++;
+            $(".content3").html("<span>" + size_increase + ' ' + 'Antrian' + "</span>")
+        }
+    </script>
+	 <script type="text/javascript">
+        var size_ini4 = 1;
+        function increase_n2(size) {
+            var size_increase = size_ini4++;
+            $(".content2").html("<span>" + size_increase + ' ' + 'Antrian' + "</span>")
+        }
+    </script>
+	<script type="text/javascript">
+        var size_ini5 = 1;
+        function increase_n(size) {
+            var size_increase = size_ini5++;
+            $(".content").html("<span>" + size_increase + ' ' + 'Antrian' + "</span>")
+        }
+    </script>
 	<div class="navbar navbar-expand-lg fixed-bottom" id="info">
       <div class="container-fluid">
           <div class="col-lg-12">
@@ -153,27 +190,73 @@
     </div>
   
 	<div id="print_area" style="font-family: 'Arial'; padding-top: 0px; margin-top: 0px; color: #000; vertical-align:top;" class="section-to-print">
-		<div align="center"><img src="{{ $image2 }}" height="50"></div>
+		<div align="center"><img src="/img/logo.png" height="50"></div>
 		<!--<div align="center">Jl. A. Yani No.1, Ngarus, Kec. Pati, Kab. Pati</div>-->
-		<div align="center" style="margin-top: 0; margin-bottom: 0; height: 5px; font-size:8pt;"><span id="cetak_waktu"></span></div>
-		<div align="center" style="margin-top: 0; margin-bottom: 0; height: 12px;"><img src="../public/images/line.jpg" height="2" width="100%"></div>
+		<div align="center" style="margin-top: 0; margin-bottom: 0; height: 5px; font-size:8pt;"><span id="cetak_waktu"> <script language='JavaScript'>document.write(tanggallengkap);</script></span></div>
+		<div align="center" style="margin-top: 0; margin-bottom: 0; height: 12px;"><img src="/img/line.png" height="2" width="100%"></div>
 		<div align="center" style="margin-top: 0; margin-bottom: 0; height: 10px; font-size:10pt;">Nomor Antrian Anda :</div>
 		<div align="center" style="margin-top: 0; margin-bottom: 0; height: 55px; font-size:35pt;"><b><span id="cetak_number"></span></b></div>
 		<div align="center" style="margin-top: 0; margin-bottom: 0; height: 20px;"><b><span id="cetak_service"></span></b></div>
 		<div align="center" style="margin-top: 0; margin-bottom: 0; height: 10px; font-size:10pt;">Silahkan Menunggu <span id="cetak_pending"></span> Antrian</div>
-		<div align="center" style="margin-top: 0; margin-bottom: 0; height: 12px;"><img src="../public/images/line.jpg" height="2" width="100%"></div>
+		<div align="center" style="margin-top: 0; margin-bottom: 0; height: 12px;"><img src="/img/line.png" height="2" width="100%"></div>
 		<div align="center" style="font-size:9pt;">Silahkan mengambil nomor antrian baru jika nomor antrian Anda terlewatkan. </div>
 		<div align="center" style="font-size:9pt;"> ~ TERIMA KASIH ~ </div>
 	</div>
+
+	<script>
+		function printDiv(print_area) {
+     var printContents = document.getElementById(print_area).innerHTML;
+     var originalContents = document.body.innerHTML;
+
+     document.body.innerHTML = printContents;
+
+     window.print();
+
+     document.body.innerHTML = originalContents;
+}
+
+		</script>
 	
-	
-    <script src="../public/vendor/jquery/dist/jquery.min.js"></script>
-    <script src="../public/vendor/gritter/js/jquery.gritter.min.js"></script>
-    <script src="../public/vendor/jquery.print/js/jquery.print.js"></script>
-    <script src="../public/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../public/vendor/prismjs/prism.js" data-manual></script>
-    <script src="../public/assets/js/custom.js"></script>
-	<script type="text/javascript">
+	<script type="text/javascript" src="{{ URL::asset('js/anjungan/bootstrap.bundle.min.js') }}"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	{{-- <script type="text/javascript" src="{{ URL::asset('js/anjungan/jquery.min.js') }}"></script>
+	<script type="text/javascript" src="{{ URL::asset('js/anjungan/jquery.gritter.min.js') }}"></script>
+	<script type="text/javascript" src="{{ URL::asset('js/anjungan/prism.js') }}"></script>
+	<script type="text/javascript" src="{{ URL::asset('js/anjungan/custom.js') }}"></script>
+	<script type="text/javascript" src="{{ URL::asset('js/anjungan/jquery.print.js') }}"></script> --}}
+<script>
+var clicks = 0; $("#service_5").click(function(){ clicks++; $('.jml_antrian_5').html(clicks);});
+	</script>
+
+
+	{{-- <script>
+		var i = 0;
+		function buttonClick() {
+			i++;
+			document.getElementById('inc').value = i;
+		}
+		function buttonClick2() {
+			i++;
+			document.getElementById('inc2').value = i;
+		}
+		function buttonClick3() {
+			i++;
+			document.getElementById('inc3').value = i;
+		}
+		function buttonClick4() {
+			i++;
+			document.getElementById('inc4').value = i;
+		}
+		function buttonClick5() {
+			i++;
+			document.getElementById('inc5').value = i;
+		}
+	</script> --}}
+
+
+
+
+	{{-- <script type="text/javascript">
 		$(document).ready(function() {
 			$('#jml_antrian_1').load('proses6ea3.html?com=get_antrian_pending&amp;service=1');
 			$('#jml_antrian_2').load('prosesc98c.html?com=get_antrian_pending&amp;service=2');
@@ -389,7 +472,7 @@
 			
 			
 		} );
-	</script>
+	</script> --}}
 	
   </body>
 
